@@ -7,7 +7,7 @@ const Home = ({ data }) => {
   return (
     <>
       <div className="home-slide"></div>
-      <img id="separtop" src="./assets/sepa-top.svg" />
+      <img id="separtop" src={SepaTop} />
       <div className="home-card-wrap">
         {data.offers.map((offer, index) => {
           return (
