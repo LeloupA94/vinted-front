@@ -1,42 +1,196 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+:root {
+  --grisfooter: #f2f2f2;
+  --grissearch: #f5f6f7;
+  --bleuvinted: #2cb1ba;
+  --blanc: #ffffff;
+  --ecriture: #242424;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-width: 960px;
+}
+
+header {
+  align-items: center;
+  height: 52px;
+  padding-bottom: 0;
+}
+
+.contentHeader {
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  margin-right: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo img {
+  width: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.card {
-  padding: 2em;
+.search {
+  background-color: var(--grissearch);
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  height: 37px;
+  outline: none;
+  padding-left: 50px;
+  width: 590px;
 }
 
-.read-the-docs {
-  color: #888;
+.searchbar span {
+  width: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  padding: 0.7rem;
+  color: #bbb;
 }
+
+.signup {
+  margin-right: 20px;
+  background-color: #fff;
+  color: var(--bleuvinted);
+  border: 1px solid var(--bleuvinted);
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  width: 115px;
+}
+.login {
+  margin-right: 20px;
+  background-color: #fff;
+  color: var(--bleuvinted);
+  border: 1px solid var(--bleuvinted);
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  width: 115px;
+}
+
+.soldbouton {
+  margin-right: 20px;
+  background-color: var(--bleuvinted);
+  color: var(--blanc);
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  width: 115px;
+}
+
+.homecontainer {
+  display: flex;
+}
+
+.home-slide {
+  background-image: url(../src/assets/banner.jpeg);
+  background-size: cover;
+  height: 455px;
+  width: 100%;
+}
+
+.separate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.separtop {
+  background-image: url(../src/assets/sepa-top.svg);
+  bottom: 0;
+  height: 80px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.home-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto auto;
+  width: 1280px;
+}
+
+.card-container {
+  cursor: pointer;
+  padding: 0 6px 16px;
+  width: 235px;
+}
+
+.card-avatar {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+.card-picture {
+  height: 350px;
+  object-fit: cover;
+  width: 235px;
+}
+
+.card-infos {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.card-infos span {
+  font-size: 14px;
+  color: #999;
+}
+
+/*.containerfooter {
+  margin: 0 auto;
+  flex-direction: row;
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+footer {
+  background: var(--grisfooter);
+  color: var(--ecriture);
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  display: flex;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--bleuvinted);
+}
+
+footer a:hover {
+  color: var(--bleuvinted);
+}*/
