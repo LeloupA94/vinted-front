@@ -129,11 +129,16 @@ header {
   width: 100%;
 }
 
-.separtop {
-  z-index: 99;
-  bottom: 83px;
-  height: 0px;
-  position: relative;
+#separtop {
+  width: 100%;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 460px;
+}
+
+img {
+  object-fit: cover;
 }
 
 .home-card-wrap {
