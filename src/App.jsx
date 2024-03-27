@@ -9,7 +9,6 @@ import Offer from "./pages/Offer";
 
 // Import components
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState({});
@@ -37,12 +36,11 @@ const App = () => {
       {/* Le composant Routes doit contenir toutes mes routes, il affiche un seul de ses enfants à la fois */}
       <Routes>
         {/* path=chemin element=le composant à afficher si l'url correspond au chemin */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home data={data} />} />
         {/* La route offer/:id necessite l'envoie d'un params */}
         <Route path="/offer/:id" element={<Offer />} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
-      <Footer />
     </Router>
   );
 };
