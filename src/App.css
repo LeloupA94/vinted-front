@@ -23,19 +23,17 @@ body {
 }
 
 header {
-  align-items: center;
   height: 55px;
-  padding-bottom: 0;
   display: flex;
   justify-content: center;
 }
 
 .contentHeader {
-  max-width: 1280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+  gap: 35px;
 }
 
 .logo {
