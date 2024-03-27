@@ -148,12 +148,17 @@ header {
   padding: 30px;
 }
 
+.newsslide p {
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+}
 .newsslide button {
   width: 180px;
   height: 40px;
   background: var(--bleuvinted);
   color: var(--blanc);
   border-radius: 5px;
+  border: none;
 }
 
 .separate {
