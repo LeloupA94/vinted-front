@@ -121,6 +121,41 @@ header {
   width: 100%;
 }
 
+.contentSlider {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 70px 120px;
+}
+
+.cart-news {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 260px;
+}
+
+.newsslide {
+  width: 400px;
+  height: 260px;
+  background: var(--blanc);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.newsslide button {
+  width: 180px;
+  height: 40px;
+  background: var(--bleuvinted);
+  color: var(--blanc);
+  border-radius: 5px;
+}
+
 .separate {
   display: flex;
   flex-direction: column;

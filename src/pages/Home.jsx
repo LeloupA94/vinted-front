@@ -6,8 +6,17 @@ const Home = ({ data }) => {
   //console.log(data);
   return (
     <>
-      <div className="home-slide"></div>
-      <img id="separtop" src={SepaTop} />
+      <div className="home-slide">
+        <div className="contentSlider">
+          <div className="cart-news">
+            <div className="newsslide">
+              <p>Prêts à faire du tri dans vos placards ??</p>
+              <button>Commencer à vendre</button>
+            </div>
+          </div>
+          <img id="separtop" src={SepaTop} />
+        </div>
+      </div>
       <div className="home-card-wrap">
         {data.offers.map((offer, index) => {
           return (
