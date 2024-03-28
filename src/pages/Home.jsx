@@ -18,7 +18,7 @@ const Home = ({ data }) => {
         </div>
       </div>
       <div className="home-card-wrap">
-        {data.offers.map((offer, id) => {
+        {data.offers.map((offer) => {
           return (
             <div className="card-container" key={offer.id}>
               <Link to={"/offers/" + offer._id}>
