@@ -14,7 +14,7 @@ const Login = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://lereacteur-vinted-api.herokuapp.com/user/signup`
+          `https://lereacteur-vinted-api.herokuapp.com/user/login`
         );
 
         setData(response.data);
