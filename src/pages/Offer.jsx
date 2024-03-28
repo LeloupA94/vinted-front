@@ -52,6 +52,7 @@ const Offer = () => {
             </div>
             <p>{data.product_name}</p>
             <p>{data.product_description}</p>
+            <button>Acheter ce truc</button>
           </div>
         </div>
       </div>

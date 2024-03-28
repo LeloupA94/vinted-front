@@ -25,7 +25,7 @@ body {
 /*--------------------------- HEADER ----------------------*/
 
 header {
-  height: 55px;
+  height: 60x;
   display: flex;
   justify-content: center;
 }
@@ -179,7 +179,7 @@ header {
   height: 50px;
   left: 0;
   position: absolute;
-  top: 460px;
+  top: 463px;
 }
 
 img {
