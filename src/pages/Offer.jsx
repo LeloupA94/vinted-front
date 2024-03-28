@@ -29,13 +29,31 @@ const Offer = () => {
     <p>Loading...</p>
   ) : (
     <main>
-      <h1>offer</h1>
-      <img src={data.product_image.secure_url} alt="" />
-      <p>PRIX : {data.product_price} €</p>
-      <div>
-        <p>MARQUE : {data.product_details[0].MARQUE}</p>
-        <p>ETAT : {data.product_details[1].ETAT}</p>
-        <p>COULEUR : {data.product_details[2].COULEUR}</p>
+      <div className="offer-body">
+        <div className="offer-content">
+          <div className="offer-picture">
+            <img src={data.product_image.secure_url} alt="" />
+          </div>
+          <div className="offer-infos">
+            <p>PRIX : {data.product_price} €</p>
+            <div>
+              {data.product_details.map((detail) => {
+                console.log(detail);
+                const keys = Object.keys(detail);
+                console.log(keys);
+                const Keyname = keys[0];
+                console.log(Keyname);
+                return (
+                  <p key={Keyname}>
+                    {Keyname} : {detail[Keyname]}
+                  </p>
+                );
+              })}
+            </div>
+            <p>{data.product_name}</p>
+            <p>{data.product_description}</p>
+          </div>
+        </div>
       </div>
     </main>
   );

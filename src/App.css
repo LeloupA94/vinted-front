@@ -254,6 +254,39 @@ img {
 
 /*--------------------------- ENDMAIN ----------------------*/
 
+/*--------------------------- OFFER ----------------------*/
+
+.offer-body {
+  background-color: #ebedee;
+  height: calc(100vh - 60px);
+}
+
+.offer-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 30px;
+  width: 1280px;
+}
+
+.offer-picture img {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.offer-infos {
+  background: var(--blanc);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  width: 320px;
+}
+
+/*--------------------------- ENDFORM ----------------------*/
+
 /*--------------------------- FORM ----------------------*/
 
 /*--------------------------- ENDFORM ----------------------*/
