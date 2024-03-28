@@ -122,9 +122,7 @@ header {
 .home-slide {
   background-image: url(../src/assets/banner.jpeg);
   background-size: cover;
-  height: 100%;
-  min-height: 65vh;
-  padding-top: 20px;
+  height: 455px;
   width: 100%;
 }
 
@@ -179,7 +177,7 @@ header {
   height: 50px;
   left: 0;
   position: absolute;
-  top: 520px;
+  top: 460px;
 }
 
 img {
