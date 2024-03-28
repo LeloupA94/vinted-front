@@ -1,14 +1,43 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Offer = () => {
-  //   const params = useParams();
-  //   console.log(params.id);
-  const { _id } = useParams();
+  const [data, setData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
-  return (
-    <>
-      <h1>Je suis sur la page de l'offre dont l'id est {_id}</h1>;
-    </>
+  //console.log(useParams());
+  const { id } = useParams();
+  console.log(id);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://lereacteur-vinted-api.herokuapp.com/offer/${id}`
+        );
+
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+  return isLoading ? (
+    <p>Loading...</p>
+  ) : (
+    <main>
+      <h1>offer</h1>
+      <img src={data.product_image.secure_url} alt="" />
+      <p>PRIX : {data.product_price} €</p>
+      <div>
+        <p>MARQUE : {data.product_details[0].MARQUE}</p>
+        <p>ETAT : {data.product_details[1].ETAT}</p>
+        <p>COULEUR : {data.product_details[2].COULEUR}</p>
+      </div>
+    </main>
   );
 };
 

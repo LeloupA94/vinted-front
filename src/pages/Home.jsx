@@ -14,16 +14,19 @@ const Home = ({ data }) => {
               <button>Commencer à vendre</button>
             </div>
           </div>
-          <img id="separtop" src={SepaTop} />
+          <img id="separtop" src={SepaTop} alt="separateurtop" />
         </div>
       </div>
       <div className="home-card-wrap">
         {data.offers.map((offer) => {
           return (
             <div className="card-container" key={offer.id}>
-              <Link to={"/offers/" + offer._id}>
+              <Link to={"/offer/" + offer._id}>
                 <div className="card-avatar">
-                  <img src={offer.owner.account.avatar.secure_url} />
+                  <img
+                    src={offer.owner.account.avatar.secure_url}
+                    alt="laphoto"
+                  />
                   <span>{offer.owner.account.username}</span>
                 </div>
                 <div className="card-pictures">

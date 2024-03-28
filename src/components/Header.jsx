@@ -1,11 +1,14 @@
 import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
       <div className="contentHeader">
-        <div className="logo">
-          <img src={Logo} />
-        </div>
+        <Link to={"/"}>
+          <div className="logo">
+            <img src={Logo} />
+          </div>
+        </Link>
         <div className="searchbar">
           <span>
             <i className="fa-solid fa-magnifying-glass"></i>
@@ -17,8 +20,12 @@ const Header = () => {
           ></input>
         </div>
         <div>
-          <button className="signup">S'inscrire</button>
-          <button className="login">Se connecter</button>
+          <Link to={"/Signup/"}>
+            <button className="signup">S'inscrire</button>
+          </Link>
+          <Link to={"/Login/"}>
+            <button className="login">Se connecter</button>
+          </Link>
         </div>
         <button className="soldbouton">Vends tes articles</button>
       </div>

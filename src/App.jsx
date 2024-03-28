@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Import Pages
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
+import Signup from "./pages/signup";
+import Login from "./pages/Login";
 
 // Import components
 import Header from "./components/Header";
@@ -38,7 +40,9 @@ const App = () => {
         {/* path=chemin element=le composant à afficher si l'url correspond au chemin */}
         <Route path="/" element={<Home data={data} />} />
         {/* La route offer/:id necessite l'envoie d'un params */}
-        <Route path="/offer/:id" element={<Offer />} />
+        <Route path="/offer/:id" element={<Offer data={data} />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
     </Router>
