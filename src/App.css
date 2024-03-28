@@ -11,6 +11,7 @@
   --blanc: #ffffff;
   --ecriture: #242424;
   --grisusername: #999999;
+  --grisplaceholder: #fcced3;
 }
 
 * {
@@ -20,6 +21,15 @@
 body {
   font-family: "Roboto", sans-serif;
   min-width: 960px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+placeholder {
+  color: var(--grisplaceholder);
 }
 
 /*--------------------------- HEADER ----------------------*/
@@ -57,6 +67,7 @@ header {
   border: none;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
+  color: var(--grisusername);
   font-size: 16px;
   height: 37px;
   outline: none;
@@ -285,10 +296,81 @@ img {
   width: 320px;
 }
 
-/*--------------------------- ENDFORM ----------------------*/
+/*--------------------------- ENDOFFER ----------------------*/
 
 /*--------------------------- FORM ----------------------*/
 
+.signup-body,
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.signupform,
+.loginform {
+  margin: auto;
+  width: 280px;
+  margin-top: 20px;
+}
+
+.signupform > input,
+.loginform > input {
+  border: none;
+  border-bottom: 1px solid var(--grisplaceholder);
+  height: 40px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.signupform-error {
+  color: red;
+  font-size: 10px;
+}
+
+.check-form {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.check-form span {
+  display: flex;
+}
+
+.check-form input[type="checkbox"] {
+  margin-right: 20px;
+  transform: scale(2);
+}
+.check-form p {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #999;
+  text-align: left;
+}
+.signupform button,
+.loginform button {
+  background-color: var(--bleuvinted);
+  border: none;
+  border-radius: 5px;
+  color: var(--blanc);
+  font-size: 16px;
+  height: 45px;
+  margin-top: 20px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.signupform a,
+.loginform a {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bleuvinted);
+  margin-top: 20px;
+  text-decoration: none;
+}
 /*--------------------------- ENDFORM ----------------------*/
 
 /*--------------------------- FOOTER ----------------------*/

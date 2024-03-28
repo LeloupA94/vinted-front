@@ -24,7 +24,7 @@ const Home = ({ data }) => {
               <Link to={"/offer/" + offer._id}>
                 <div className="card-avatar">
                   <img
-                    src={offer.owner.account.avatar.secure_url}
+                    src={offer.owner.account.avatar?.secure_url}
                     alt="laphoto"
                   />
                   <span>{offer.owner.account.username}</span>
