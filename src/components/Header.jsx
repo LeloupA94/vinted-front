@@ -1,6 +1,6 @@
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-const Header = () => {
+const Header = ({ token, handleToken }) => {
   return (
     <header className="header">
       <div className="contentHeader">
@@ -20,12 +20,25 @@ const Header = () => {
           ></input>
         </div>
         <div>
-          <Link to={"/Signup/"}>
-            <button className="signup">S'inscrire</button>
-          </Link>
-          <Link to={"/Login/"}>
-            <button className="login">Se connecter</button>
-          </Link>
+          {token ? (
+            <button
+              className="logout"
+              onClick={() => {
+                handleToken(null);
+              }}
+            >
+              Se Déconnecter
+            </button>
+          ) : (
+            <>
+              <Link to="/signup">
+                <button className="signup">S'inscrire</button>
+              </Link>
+              <Link to="/login">
+                <button className="login">Se connecter</button>
+              </Link>
+            </>
+          )}
         </div>
         <button className="soldbouton">Vends tes articles</button>
       </div>

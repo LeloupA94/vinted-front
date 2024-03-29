@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Cookies from "js-cookie";
 
 // Import Pages
 import Home from "./pages/Home";
@@ -29,20 +30,31 @@ const App = () => {
     fetchData();
   }, []);
 
+  const [token, setToken] = useState(Cookies.get("vinted-token") || null);
+  const handleToken = (token) => {
+    if (token) {
+      Cookies.set("vinted-token", token, { expires: 15 });
+      setToken(token);
+    } else {
+      Cookies.remove("vinted-token");
+      setToken(null);
+    }
+  };
+
   return isLoading ? (
     <span>En cours de chargement... </span>
   ) : (
     <Router>
       {/* Mon Header apparait sur toutes les pages */}
-      <Header />
+      <Header token={token} handleToken={handleToken} />
       {/* Le composant Routes doit contenir toutes mes routes, il affiche un seul de ses enfants à la fois */}
       <Routes>
         {/* path=chemin element=le composant à afficher si l'url correspond au chemin */}
         <Route path="/" element={<Home data={data} />} />
         {/* La route offer/:id necessite l'envoie d'un params */}
-        <Route path="/offer/:id" element={<Offer data={data} />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/offer/:id" element={<Offer />} />
+        <Route path="/signup" element={<Signup handleToken={handleToken} />} />
+        <Route path="/login" element={<Login handleToken={handleToken} />} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
     </Router>

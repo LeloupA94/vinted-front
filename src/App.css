@@ -1,5 +1,4 @@
 #root {
-  margin: 0 auto;
   flex-direction: row;
   margin: 0 auto;
 }
@@ -113,6 +112,19 @@ header {
 .soldbouton {
   margin-right: 20px;
   background-color: var(--bleuvinted);
+  color: var(--blanc);
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  width: 115px;
+  cursor: pointer;
+}
+
+.logout {
+  margin-right: 20px;
+  background-color: rgb(230, 71, 71);
   color: var(--blanc);
   border: none;
   border-radius: 5px;
@@ -323,16 +335,29 @@ img {
   height: 40px;
   margin-bottom: 20px;
   width: 100%;
+  outline: none;
 }
 
-.signupform-error {
-  color: red;
+.signupform-error,
+.loginform-error {
+  width: 100%;
+  height: 30px;
+  color: var(--blanc);
+  background: red;
   font-size: 10px;
+  line-height: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .check-form {
   margin-top: 20px;
   padding: 10px;
+}
+
+.checkcarre {
+  display: flex;
+  align-items: center;
 }
 
 .check-form span {
@@ -341,7 +366,7 @@ img {
 
 .check-form input[type="checkbox"] {
   margin-right: 20px;
-  transform: scale(2);
+  transform: scale(1.5);
 }
 .check-form p {
   font-size: 12px;

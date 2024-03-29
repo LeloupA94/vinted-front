@@ -23,10 +23,12 @@ const Home = ({ data }) => {
             <div className="card-container" key={offer.id}>
               <Link to={"/offer/" + offer._id}>
                 <div className="card-avatar">
-                  <img
-                    src={offer.owner.account.avatar?.secure_url}
-                    alt="laphoto"
-                  />
+                  {offer.owner.account.avatar && (
+                    <img
+                      src={offer.owner.account.avatar.secure_url}
+                      alt="laphoto"
+                    />
+                  )}
                   <span>{offer.owner.account.username}</span>
                 </div>
                 <div className="card-pictures">
