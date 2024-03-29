@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -64,7 +65,7 @@ const Signup = () => {
           </div>
 
           <button type="submit">S'inscrire</button>
-          <a href="/Login">tu as déja un compte ? Connecte-toi</a>
+          <Link to={"/Login/"}>Si tu as déja un compte, Connecte toi</Link>
         </form>
       </div>
     </main>
