@@ -35,8 +35,8 @@ const Offer = () => {
             <img src={data.product_image.secure_url} alt="" />
           </div>
           <div className="offer-infos">
-            <p>PRIX : {data.product_price} €</p>
-            <div>
+            <div className="offerprice">{data.product_price} €</div>
+            <div className="offerinfos">
               {data.product_details.map((detail) => {
                 console.log(detail);
                 const keys = Object.keys(detail);
@@ -50,9 +50,15 @@ const Offer = () => {
                 );
               })}
             </div>
+            <div className="linegrey"></div>
             <p>{data.product_name}</p>
-            <p>{data.product_description}</p>
-            <button>Acheter ce truc</button>
+
+            <div className="offerdescription">{data.product_description}</div>
+            <div className="userimg">
+              <img src={data.owner.account.avatar.secure_url} alt="laphoto" />
+              <span>{data.owner.account.username}</span>
+            </div>
+            <button className="offerbtn">Acheter cet article</button>
           </div>
         </div>
       </div>

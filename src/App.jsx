@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 
 // Import components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState({});
@@ -57,6 +58,7 @@ const App = () => {
         <Route path="/login" element={<Login handleToken={handleToken} />} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
