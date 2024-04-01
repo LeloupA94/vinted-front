@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 
 const Signup = ({ handleToken }) => {
   const [username, setUsername] = useState("");
@@ -75,6 +74,13 @@ const Signup = ({ handleToken }) => {
               setPassword(event.target.value);
             }}
           />
+          {/* <label name="avatar">Choose a profile picture:</label>
+          <input
+            id="image"
+            type="file"
+            name="profile_photo"
+            placeholder="Photo"
+          /> */}
 
           <div className="check-form">
             <div>

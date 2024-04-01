@@ -1,6 +1,6 @@
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-const Header = ({ token, handleToken }) => {
+const Header = ({ token, search, handleToken, setSearch }) => {
   return (
     <header className="header">
       <div className="contentHeader">
@@ -13,10 +13,15 @@ const Header = ({ token, handleToken }) => {
           <span>
             <i className="fa-solid fa-magnifying-glass"></i>
           </span>
+
           <input
             className="search"
             type="text"
-            placeholder="Recherche d'articles"
+            placeholder="Rechercher des articles"
+            value={search}
+            onChange={(event) => {
+              setSearch(event.target.value);
+            }}
           ></input>
         </div>
         <div>
