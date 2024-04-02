@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Offer = () => {
   const [data, setData] = useState({});
@@ -58,7 +58,9 @@ const Offer = () => {
               <img src={data.owner.account.avatar?.secure_url} alt="laphoto" />
               <span>{data.owner.account.username}</span>
             </div>
-            <button className="offerbtn">Acheter cet article</button>
+            <Link to="/Payment">
+              <button className="offerbtn">Acheter cet article</button>
+            </Link>
           </div>
         </div>
       </div>

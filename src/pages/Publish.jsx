@@ -64,7 +64,6 @@ const Publish = ({ token }) => {
             style={{ display: "none" }}
             id="picture-input"
             type="file"
-            value={picture}
             onChange={(event) => {
               setPicture(event.target.files[0]);
             }}

@@ -11,7 +11,9 @@ const Home = ({ data }) => {
           <div className="cart-news">
             <div className="newsslide">
               <p>Prêts à faire du tri dans vos placards ??</p>
-              <button>Commencer à vendre</button>
+              <Link to={"/publish"}>
+                <button>Commencer à vendre</button>
+              </Link>
             </div>
           </div>
           <img id="separtop" src={SepaTop} alt="separateurtop" />
