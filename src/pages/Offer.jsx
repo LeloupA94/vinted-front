@@ -55,7 +55,7 @@ const Offer = () => {
 
             <div className="offerdescription">{data.product_description}</div>
             <div className="userimg">
-              <img src={data.owner.account.avatar.secure_url} alt="laphoto" />
+              <img src={data.owner.account.avatar?.secure_url} alt="laphoto" />
               <span>{data.owner.account.username}</span>
             </div>
             <button className="offerbtn">Acheter cet article</button>

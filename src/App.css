@@ -10,7 +10,7 @@
   --blanc: #ffffff;
   --ecriture: #242424;
   --grisusername: #999999;
-  --grisplaceholder: #fcced3;
+  --grisplaceholder: #bfbfbf;
 }
 
 * {
@@ -24,10 +24,6 @@ body {
 h1 {
   font-size: 24px;
   font-weight: 400;
-}
-
-placeholder {
-  color: var(--grisplaceholder);
 }
 
 /*--------------------------- HEADER ----------------------*/
@@ -463,6 +459,151 @@ img {
 }
 /*--------------------------- ENDFORM ----------------------*/
 
+/*--------------------------- PUBLISH ----------------------*/
+
+.publish-content {
+  background-color: #ebedee;
+  padding-top: 30px;
+}
+
+.formpusblish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px;
+  width: 950px;
+  background: var(--blanc);
+  border-radius: 5px;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid var(--grisplaceholder);
+}
+
+.formpusblish ::placeholder {
+  color: var(--grisplaceholder);
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  margin-right: 10px; /* Espacement entre le label et l'input */
+  align-items: center;
+}
+.formpusblish label {
+  margin-top: 20px;
+}
+.publish-content h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.dropbox {
+  margin: 10px 0;
+  height: 180px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted var(--grisusername);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropbox input {
+  display: none;
+}
+
+.btnupload {
+  text-decoration: none;
+  background-color: var(--bleuvinted);
+  color: var(--blanc);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnupload:hover {
+  text-decoration: none;
+  background-color: var(--blanc);
+  color: var(--bleuvinted);
+  padding: 10px 20px;
+  border: 1px solid var(--bleuvinted);
+  cursor: pointer;
+}
+
+.btnupload span {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.formpusblish input {
+  border: none;
+  border-bottom: 1px solid var(--grisplaceholder);
+  height: 40px;
+  margin-bottom: 20px;
+  width: 430px;
+  outline: none;
+}
+
+.articleinfo1 {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 980px;
+  height: 200px;
+  background-color: var(--blanc);
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.articleinfo2 {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 980px;
+  height: 500px;
+  background-color: var(--blanc);
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.articleinfo1 label {
+  margin-top: 10px;
+  width: 130px;
+}
+
+.sepagrise {
+  border-bottom: 1px solid var(--grisusername);
+  margin-top: 10px;
+}
+
+.btnsubmitform {
+  text-decoration: none;
+  background-color: var(--bleuvinted);
+  color: var(--blanc);
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/*--------------------------- ENDPUBLISH ----------------------*/
+
 /*--------------------------- FOOTER ----------------------*/
 
 .footer {
@@ -470,7 +611,7 @@ img {
   justify-content: space-evenly;
   background: var(--bleuvinted);
   height: 80px;
-  position: sticky;
+
   top: 0;
 }
 

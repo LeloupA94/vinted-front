@@ -25,7 +25,7 @@ const Home = ({ data }) => {
                 <div className="card-avatar">
                   {offer.owner.account.avatar && (
                     <img
-                      src={offer.owner.account.avatar.secure_url}
+                      src={offer.owner.account.avatar?.secure_url}
                       alt="laphoto"
                     />
                   )}
@@ -59,11 +59,7 @@ const Home = ({ data }) => {
         <div className="card-container">
           <div className="card-avatar"></div>
           <div className="card-pictures">
-            <div className="card-infos">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <div className="card-infos"></div>
           </div>
         </div>
       </div>

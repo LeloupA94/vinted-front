@@ -45,7 +45,9 @@ const Header = ({ token, search, handleToken, setSearch }) => {
             </>
           )}
         </div>
-        <button className="soldbouton">Vends tes articles</button>
+        <Link to={token ? "/publish" : "/login"}>
+          <button className="soldbouton">Vends tes articles</button>
+        </Link>
       </div>
     </header>
   );
