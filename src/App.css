@@ -104,6 +104,20 @@ header {
   cursor: pointer;
 }
 
+.signup:hover,
+.login:hover {
+  margin-right: 10px;
+  background-color: var(--bleuvinted);
+  color: var(--blanc);
+  border: 1px solid var(--bleuvinted);
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  width: 110px;
+  cursor: pointer;
+}
+
 .soldbouton {
   margin-right: 20px;
   background-color: var(--bleuvinted);
@@ -184,6 +198,17 @@ header {
   color: var(--blanc);
   border-radius: 5px;
   border: none;
+}
+
+.newsslide button:hover {
+  width: 180px;
+  height: 40px;
+  background: var(--blanc);
+  color: var(--bleuvinted);
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--bleuvinted);
+  cursor: pointer;
 }
 
 .separate {
@@ -440,6 +465,22 @@ img {
   outline: none;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.signupform button:hover,
+.loginform button:hover {
+  background-color: var(--blanc);
+  border: none;
+  border-radius: 5px;
+  color: var(--bleuvinted);
+  font-size: 16px;
+  height: 45px;
+  margin-top: 20px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--bleuvinted);
+  cursor: pointer;
 }
 
 .signupform a,

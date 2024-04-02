@@ -25,6 +25,7 @@ const Offer = () => {
     };
     fetchData();
   }, []);
+  // page en chargement si soucis sinon on affiche le contenu
   return isLoading ? (
     <p>Loading...</p>
   ) : (

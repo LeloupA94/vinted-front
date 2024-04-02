@@ -20,10 +20,10 @@ const Home = ({ data }) => {
         </div>
       </div>
       <div className="home-card-wrap">
-        {data.offers.map((offer) => {
+        {data.offers.map((offer, index) => {
           return (
-            <div className="card-container" key={offer.id}>
-              <Link to={"/offer/" + offer._id}>
+            <div className="card-container" key={index}>
+              <Link to={`/offer/${offer._id}`}>
                 <div className="card-avatar">
                   {offer.owner.account.avatar && (
                     <img
